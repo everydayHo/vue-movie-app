@@ -31,7 +31,7 @@ export default {
         },
         {
           name: 'Movie',
-          href: '/movie/tt4520988',
+          href: '/movie/tt0133093',
           path: /^\/movie/,
         },
         {
@@ -58,6 +58,11 @@ header {
   align-items: center;
   .logo {
     margin-right: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    .nav {
+      display: none;
+    }
   }
 }
 </style>

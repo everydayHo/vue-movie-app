@@ -12,26 +12,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   computed: {
-    image() {
-      return this.$store.state.about.image;
-    },
-    name() {
-      return this.$store.state.about.name;
-    },
-    email() {
-      return this.$store.state.about.email;
-    },
-    phone() {
-      return this.$store.state.about.phone;
-    },
+    ...mapState('about', ['image', 'name', 'email', 'phone']),
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '~/scss/main';
 .about {
   text-align: center;
   .photo {
